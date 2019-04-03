@@ -1,6 +1,10 @@
 # Task2
 
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+=======
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+>>>>>>> cfe3ef4b78c55fdc25219119f8b6197522e52f60
 
 ## Development server
 

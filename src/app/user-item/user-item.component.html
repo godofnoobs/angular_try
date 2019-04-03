@@ -1,0 +1,6 @@
+<li>
+    <p [class.selected]="selected" (click)="toggleClass()">
+        {{user.lastname}} {{user.name}}
+    </p>
+    <app-task-list *ngIf="selected" [taskList]="taskList"></app-task-list>
+</li>

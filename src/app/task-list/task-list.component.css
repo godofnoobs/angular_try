@@ -1,0 +1,16 @@
+.blink__on {
+    color: darkgreen;
+    animation: blink 150ms infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: #000;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: #000;
+    }
+}

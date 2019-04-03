@@ -1,0 +1,5 @@
+<li [title]="task.todo">
+        {{task.taskName}}
+        <input type="checkbox" [checked]="task.isDone"
+        [(ngModel)]="task.isDone" (click)="change($event)" />
+</li>
