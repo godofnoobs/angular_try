@@ -18,13 +18,12 @@ export class UserListComponent implements OnInit {
         console.log(this.userList);
     }
 
-    selectedCondition(user: User): void {
-        console.log('RECEIVED USER', user);
-    }
-
     setSelectedInd(user: User): void {
         const selectedInd = this.userList.findIndex(it => it === user);
-        console.log('SELECTED_INDEX', selectedInd);
+        if (this.selectedInd === selectedInd) {
+            this.selectedInd = undefined;
+            return;
+        }
         this.selectedInd = selectedInd;
     }
 

@@ -12,23 +12,22 @@ export class UserItemComponent implements OnInit {
     @Input() user: User;
     @Input() selected: boolean;
     @Output() onUserSelect = new EventEmitter<User>();
-    
+
     taskList: Homework[];
 
     constructor() { }
 
     ngOnInit() {
-        console.log(this.selected);
-        console.log(this.user);
     }
 
     selectUserItem() {
-        console.log(222);
         this.onUserSelect.emit(this.user);
     }
-    
+
     ngOnChanges(changes: SimpleChanges) {
-        this.taskList = changes.user.currentValue.taskList;
+        if (changes.user) {
+            this.taskList = changes.user.currentValue.taskList;
+        }
     }
 
 }

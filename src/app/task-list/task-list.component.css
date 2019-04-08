@@ -4,16 +4,14 @@
 }
 
 div {
-    position: absolute;
-    visibility: hidden;
+    display: none;
+    padding-left: 10px;
+    background-color: silver;
+    text-align: left;
 }
 
 .visible {
-    padding: 10px;
-    visibility: visible;
-    border: 1px dashed #222222;
-    border-radius: 5px;
-    background-color: goldenrod;
+    display: block;
     user-select: none;
 }
 
