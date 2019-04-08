@@ -2,7 +2,7 @@
     user-list works!
 </p>
 <ul>
-    <app-user-item *ngFor="let user of userList"
-        [user]="user">
+    <app-user-item *ngFor="let user of userList; let i = index"
+        [user]="user" [selected]="selectedInd === i" (onUserSelect)="setSelectedInd(user)">
     </app-user-item>
 </ul>

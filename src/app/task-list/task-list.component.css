@@ -3,6 +3,20 @@
     animation: blink 150ms infinite;
 }
 
+div {
+    position: absolute;
+    visibility: hidden;
+}
+
+.visible {
+    padding: 10px;
+    visibility: visible;
+    border: 1px dashed #222222;
+    border-radius: 5px;
+    background-color: goldenrod;
+    user-select: none;
+}
+
 @keyframes blink {
     0% {
         color: #000;

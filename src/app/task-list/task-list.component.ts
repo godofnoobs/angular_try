@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Homework from '../../model/Homework';
-import { TaskItemComponent } from '../task-item/task-item.component';
 
 @Component({
     selector: 'app-task-list',
@@ -10,12 +9,13 @@ import { TaskItemComponent } from '../task-item/task-item.component';
 export class TaskListComponent implements OnInit {
 
     @Input() taskList: Homework[];
+    @Input() visible: boolean;
 
     blink: boolean = false;
 
     constructor() { }
 
-    blinkOn(event: any) {
+    blinkOn(): void {
         this.blink = true;
         setTimeout(() => { this.blink = false; }, 500);
     }

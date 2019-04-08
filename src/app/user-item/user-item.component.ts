@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, SimpleChanges, SimpleChange } from '@angular/core';
+import { Component, OnInit, Input, Output, SimpleChanges, EventEmitter, SimpleChange } from '@angular/core';
 import User from '../../model/User';
 import Homework from '../../model/Homework';
-import { TaskListComponent } from '../task-list/task-list.component';
 
 @Component({
     selector: 'app-user-item',
@@ -11,18 +10,23 @@ import { TaskListComponent } from '../task-list/task-list.component';
 export class UserItemComponent implements OnInit {
 
     @Input() user: User;
+    @Input() selected: boolean;
+    @Output() onUserSelect = new EventEmitter<User>();
+    
     taskList: Homework[];
-    selected: boolean = false;
 
     constructor() { }
 
     ngOnInit() {
+        console.log(this.selected);
+        console.log(this.user);
     }
 
-    toggleClass() {
-        this.selected = !this.selected;
+    selectUserItem() {
+        console.log(222);
+        this.onUserSelect.emit(this.user);
     }
-
+    
     ngOnChanges(changes: SimpleChanges) {
         this.taskList = changes.user.currentValue.taskList;
     }

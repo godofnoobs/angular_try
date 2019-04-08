@@ -1,10 +1,10 @@
-<div>
+<div [ngClass]="{'visible': visible}">
     <p [class.blink__on]="blink">
         Homework:
     </p>
     <ul>
         <app-task-item *ngFor="let task of taskList"
-        [task]="task" (onChanged)="blinkOn()">
+        [task]="task" (onChanged)="blinkOn" >
         </app-task-item>
     </ul>
 </div>
