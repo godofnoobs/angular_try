@@ -7,6 +7,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskItemComponent } from './task-item/task-item.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +16,9 @@ import { TaskItemComponent } from './task-item/task-item.component';
         UserListComponent,
         UserItemComponent,
         TaskListComponent,
-        TaskItemComponent
+        TaskItemComponent,
+        UserCreateComponent,
+        ModalComponent
     ],
     imports: [
         BrowserModule,

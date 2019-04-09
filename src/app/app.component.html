@@ -1,3 +1,5 @@
 <div style="text-align:center">
+    <button (click)="showCreateUser()">Create user</button>
+    <app-modal *ngIf="modal === modalTypes.createUser.name"></app-modal>
     <app-user-list [userList]="userList"></app-user-list>
 </div>

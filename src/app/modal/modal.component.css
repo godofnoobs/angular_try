@@ -1,0 +1,22 @@
+:root {
+    --modal-z-index: 20;
+}
+
+.modal__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--modal-z-index);
+}
+
+.modal__box {
+    width: 290px;
+    min-height: 200px;
+    background-color: goldenrod;
+    border: 1px dashed #333333;
+}
