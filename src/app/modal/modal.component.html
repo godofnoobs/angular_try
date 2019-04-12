@@ -1,9 +1,9 @@
 <div class="modal__wrapper">
     <div class="modal__box">
-        <ng-content></ng-content>
+        <ng-content handle()></ng-content>
         <div class="modal__controls">
-            <button type="modal__btn-ok" (click)="this.handleOk()">Ok</button>
-            <button  type="modal__btn_cancel" (click)="this.handleCancel()">Cancel</button>
+            <button type="modal__btn-ok" (click)="handleOk()">Ok</button>
+            <button  type="modal__btn_cancel" (click)="handleCancel()">Cancel</button>
         </div>
     </div>
 </div>

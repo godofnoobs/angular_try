@@ -18,7 +18,7 @@ const modalTypesDefault = {
 export class AppComponent {
 
     modalTypes: any = modalTypesDefault;
-    modal: string = undefined;
+    modal: string | undefined = undefined;
     userList: User[] = [];
 
     constructor(private userListService: UserListService) { }
@@ -32,12 +32,13 @@ export class AppComponent {
         console.log(this.modal);
     }
 
-    handleOk(): void {
-        console.log('Ok', this);
+    addUser(user: User): void {
+        console.log('Ok outside');
     }
 
-    handleCancel(): void {
-        console.log('Cancel', this);
+    closeModal(): void {
+        console.log('Cancel outside');
+        this.modal = undefined;
     }
 
     ngOnInit() {
